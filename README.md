@@ -1,36 +1,82 @@
-## React
+Perfect — you’ve got a new task here: a **React UI for books with search, add, and remove functionality**. I’ll give you a clean **README.md** you can ship along with the code.
 
-This is a simple React application. This application serves as a basic template for a react applications.  
-This project is bootstrapped with [Vite](https://vitejs.dev/guide/).
+---
 
-## How to run
+### `README.md`
 
-1. Before running the application, make sure all dependencies are installed. To install dependencies, run following command in terminal:
-   ```sh
-   npm install
-   ```
+```markdown
+# React Book List App
 
-2. Once dependencies are installed, run the following command to start the application:
-   ```sh
-   npm run dev
-   ```
+A simple React application that demonstrates how to build an interactive UI with **search**, **add**, and **remove** functionality using React state and props.
 
-3. Refresh the URL in simple browser to see the output. As shown below 
-   ![](https://static.onecompiler.com/images/posts/3zzkbysj7/studio-react-vite-reload.png)
+---
+
+## 📄 Description
+This project displays a list of books (each with a **title** and **author**).  
+It includes the following features:
+- **Search**: Filter books by title or author as the user types.
+- **Add**: Add a new book using the input form (title + author).
+- **Remove**: Delete any book from the list with a button click.
+
+All actions update the UI dynamically without reloading the page, showcasing React’s state management.
+
+---
+
+## 📂 Project Structure
+```
+
+src/
+│── App.jsx
+│── BookList.jsx
+│── BookItem.jsx
+│── index.js
+
+````
+
+---
+
+## ⚡ Usage
+
+### 1. Clone and Install
+```bash
+git clone <your-repo-url>
+cd <your-project-folder>
+npm install
+````
+
+### 2. Run Locally
+
+```bash
+npm run dev
+```
+
+---
+
+## 🖥️ Example
+
+### Initial Book List
+
+* **The Great Gatsby** — F. Scott Fitzgerald
+* **To Kill a Mockingbird** — Harper Lee
+
+### Features
+
+* Typing "Harper" in the search box filters the list to show only Harper Lee’s book.
+* Adding `"1984" by George Orwell` immediately updates the displayed list.
+* Clicking **Remove** beside a book deletes it instantly.
+
+---
+
+## 🎨 Customization
+
+* Modify the initial `books` array in `App.jsx` to change the default list.
+* Extend the `BookItem` component to show more details (e.g., year, genre).
+* Add local storage to persist books across page reloads.
+
+---
+
+## 📜 License
+
+This project is open-source and free to use.
 
 
-## FAQs & Debugging
-
- ### 1. I do not see browser in my workspace
- Studio will automatically open the app in a new browser tab. If not, you can use the following steps to open the simple browser 
-
-1. From VS Code command pallette(`Ctrl/Cmd + Shift + P`), run **Studio Manager: SimpleBrowser Default URL** command. This will open the app in a new browser tab.
-
-2. Your app runs on hosted env which can be accessed using host id, port provided in file **.vsocde/.studio/studio-env.json**. Use values to create the URL as follows:
-   `https://<STUDIO_HOST_ID>-3000.ocws.app`
-
- ### 2. Getting `vite: not found` error
- This means node_modules are missing in your workspace, please refer the 'How to run' section and make sure you have followed the steps in sequence
-
- ### 3. Can I use create-react-app instead Vite?
- Yes, you can use create-react-app instead Vite, the default workspace is loaded with Vite setup, you can remove the Vite dependencies, add create-react-app dependencies and update the scripts to start using create-react-app.
